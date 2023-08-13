@@ -12,7 +12,7 @@ namespace OW_Hero_Randomiser.Data
         private static readonly List<string> SupportsList = new List<string>()
         {
             "Ana", "Baptiste", "Brigitte", "Kiriko","Lucio", "Mercy", "Moira", "Zenyatta",
-            "Lifeweaver"
+            "Lifeweaver", "Illari"
         };
 
         public static List<string> supportsList { get { return SupportsList; } }
