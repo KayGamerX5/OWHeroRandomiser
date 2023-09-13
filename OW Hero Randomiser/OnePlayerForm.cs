@@ -22,7 +22,7 @@ namespace OW_Hero_Randomiser
         {
 
         }
-        
+
 
         private void OnePlayerForm_Load(object sender, EventArgs e)
         {
@@ -31,24 +31,24 @@ namespace OW_Hero_Randomiser
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 RoleDropdown1.Visible = true;
                 label2.Visible = false;
                 label3.Visible = true;
             }
-            if(checkBox1.Checked == false)
+            if (checkBox1.Checked == false)
             {
-                RoleDropdown1.Visible=false;
-                label2.Visible=true;
-                label3.Visible=false;
+                RoleDropdown1.Visible = false;
+                label2.Visible = true;
+                label3.Visible = false;
             }
         }
 
         private void RandomiseButton_Click(object sender, EventArgs e)
         {
             string PlayerOneName = PlayerOneNameBox.Text;
-            List<int> RolesList = Roles.rolesList;
+            List<int> RolesList = new List<int>();
             Random rnd = new Random();
             int p1RadomRoleIndex = rnd.Next(RolesList.Count);
             int p1Role = RolesList[p1RadomRoleIndex];
@@ -88,7 +88,7 @@ namespace OW_Hero_Randomiser
             }
             else
             {
-                if(RoleDropdown1.SelectedIndex == 0)
+                if (RoleDropdown1.SelectedIndex == 0)
                 {
                     string p1role = "Tank";
                     List<string> TanksList = TankHeroes.tanksList;
@@ -97,7 +97,7 @@ namespace OW_Hero_Randomiser
                     label3.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
                 }
 
-                else if(RoleDropdown1.SelectedIndex == 1)
+                else if (RoleDropdown1.SelectedIndex == 1)
                 {
                     string p1role = "Damage";
                     List<string> DamageHeroesList = DamageHeroes.damageHeroesList;
@@ -106,7 +106,7 @@ namespace OW_Hero_Randomiser
                     label3.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
                 }
 
-                else if(RoleDropdown1.SelectedIndex == 2)
+                else if (RoleDropdown1.SelectedIndex == 2)
                 {
                     string p1role = "Support";
                     List<string> SupportsList = SupportHeroes.supportsList;

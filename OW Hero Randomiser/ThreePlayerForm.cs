@@ -51,7 +51,7 @@ namespace OW_Hero_Randomiser
             string PlayerOneName = PlayerOneNameBox.Text;
             string PlayerTwoName = PlayerTwoNameBox.Text;
             string PlayerThreeName = PlayerThreeNameBox.Text;
-            List<int> RolesList = Roles.rolesList;
+            List<int> RolesList = new List<int>();
             Random rnd = new Random();
             int p1RadomRoleIndex = rnd.Next(RolesList.Count);
             int p1Role = RolesList[p1RadomRoleIndex];
@@ -332,6 +332,6 @@ namespace OW_Hero_Randomiser
             Hide();
         }
 
-        
+
     }
 }

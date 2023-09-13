@@ -33,7 +33,7 @@ namespace OW_Hero_Randomiser
             if (checkBox1.Checked == false)
             {
                 roleDropdown1.Visible = false;
-                roleDropdown2.Visible= false;
+                roleDropdown2.Visible = false;
                 PlayerOneLabel.Visible = true;
                 PlayerTwoLabel.Visible = true;
                 PlayerOneSelectedRoleLabel.Visible = false;
@@ -45,7 +45,7 @@ namespace OW_Hero_Randomiser
         {
             string PlayerOneName = PlayerOneNameBox.Text;
             string PlayerTwoName = PlayerTwoNameBox.Text;
-            List<int> RolesList = Roles.rolesList;
+            List<int> RolesList = new List<int>();
             Random rnd = new Random();
             int p1RadomRoleIndex = rnd.Next(RolesList.Count);
             int p1Role = RolesList[p1RadomRoleIndex];

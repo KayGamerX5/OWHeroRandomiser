@@ -48,7 +48,7 @@ namespace OW_Hero_Randomiser
                 PlayerOneSelectedRoleLabel.Visible = false;
                 PlayerTwoSelectedRoleLabel.Visible = false;
                 PlayerThreeSelectedRoleLabel.Visible = false;
-                PlayerFourSelectedRoleLabel.Visible= false;
+                PlayerFourSelectedRoleLabel.Visible = false;
             }
         }
 
@@ -58,7 +58,7 @@ namespace OW_Hero_Randomiser
             string PlayerTwoName = PlayerTwoNameBox.Text;
             string PlayerThreeName = PlayerThreeNameBox.Text;
             string PlayerFourName = PlayerFourNameBox.Text;
-            List<int> RolesList = Roles.rolesList;
+            List<int> RolesList = new List<int>();
             Random rnd = new Random();
             int p1RadomRoleIndex = rnd.Next(RolesList.Count);
             int p1Role = RolesList[p1RadomRoleIndex];
@@ -439,6 +439,11 @@ namespace OW_Hero_Randomiser
             MainForm Check = new MainForm();
             Check.Show();
             Hide();
+        }
+
+        private void PlayerOneNameBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
