@@ -68,25 +68,59 @@ namespace OW_Hero_Randomiser
             string playerFourName = PlayerFourNameBox.Text;
             string playerFiveName = PlayerFiveNameBox.Text;
 
-            string playerOneRole = functions.GetRole();
-            string playerTwoRole = functions.GetRole();
-            string playerThreeRole = functions.GetRole();
-            string playerFourRole = functions.GetRole();
-            string playerFiveRole = functions.GetRole();
+            if (checkBox1.Checked == false)
+            {
+                string playerOneRole = functions.GetRole();
+                string playerTwoRole = functions.GetRole();
+                string playerThreeRole = functions.GetRole();
+                string playerFourRole = functions.GetRole();
+                string playerFiveRole = functions.GetRole();
 
-            string playerOneHero = functions.GetHero(playerOneRole);
-            string playerTwoHero = functions.GetHero(playerTwoRole);
-            string playerThreeHero = functions.GetHero(playerThreeRole);
-            string playerFourHero = functions.GetHero(playerFourRole);
-            string playerFiveHero = functions.GetHero(playerFiveRole);
+                string playerOneHero = functions.GetHero(playerOneRole);
+                string playerTwoHero = functions.GetHero(playerTwoRole);
+                string playerThreeHero = functions.GetHero(playerThreeRole);
+                string playerFourHero = functions.GetHero(playerFourRole);
+                string playerFiveHero = functions.GetHero(playerFiveRole);
 
-            PlayerOneNameLabel.Text = playerOneName + playerOneRole + playerOneHero;
-            PlayerTwoNameLabel.Text = playerTwoName + playerTwoRole + playerTwoHero;
-            PlayerThreeNameLabel.Text = playerThreeName + playerThreeRole + playerThreeHero;
-            PlayerFourNameLabel.Text= playerFourName + playerFourRole + playerFourHero;
-            PlayerFiveNameLabel.Text= playerFiveName + playerFiveRole + playerFiveHero;
+                PlayerOneNameLabel.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+                PlayerTwoNameLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
+                PlayerThreeNameLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
+                PlayerFourNameLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
+                PlayerFiveNameLabel.Text = playerFiveName + ": " + playerFiveRole + ", " + playerFiveHero;
 
-            functions.ResetRoles();
+                functions.ResetRoles();
+                functions.ResetHeroes();
+            }
+
+            if (checkBox1.Checked == true)
+            {
+                int playerOneSelectedIndex = roleDropdown1.SelectedIndex;
+                int playerTwoSelectedIndex = roleDropdown2.SelectedIndex;
+                int playerThreeSelectedIndex = roleDropdown3.SelectedIndex;
+                int playerFourSelectedIndex = roleDropdown4.SelectedIndex;
+                int playerFiveSelectedIndex = roleDropdown5.SelectedIndex;
+
+                string playerOneRole = functions.GetRoleBySelectedIndex(playerOneSelectedIndex);
+                string playerTwoRole = functions.GetRoleBySelectedIndex(playerTwoSelectedIndex);
+                string playerThreeRole = functions.GetRoleBySelectedIndex(playerThreeSelectedIndex);
+                string playerFourRole = functions.GetRoleBySelectedIndex(playerFourSelectedIndex);
+                string playerFiveRole = functions.GetRoleBySelectedIndex(playerFiveSelectedIndex);
+
+                string playerOneHero = functions.GetHeroBySelectedIndex(playerOneSelectedIndex);
+                string playerTwoHero = functions.GetHeroBySelectedIndex(playerTwoSelectedIndex);
+                string playerThreeHero = functions.GetHeroBySelectedIndex(playerThreeSelectedIndex);
+                string playerFourHero = functions.GetHeroBySelectedIndex(playerFourSelectedIndex);
+                string playerFiveHero = functions.GetHeroBySelectedIndex(playerFiveSelectedIndex);
+
+                PlayerOneSelectedRoleLabel.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+                PlayerTwoSelectedRoleLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
+                PlayerThreeSelectedRoleLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
+                PlayerFourSelectedRoleLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
+                PlayerFiveSelectedRoleLabel.Text = playerFiveName + ": " + playerFiveRole + ", " + playerFiveHero;
+
+                functions.ResetRoles();
+                functions.ResetHeroes();
+            }
             
         }
 
