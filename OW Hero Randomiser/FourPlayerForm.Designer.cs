@@ -65,6 +65,7 @@
             this.PlayerOneNameBox.Name = "PlayerOneNameBox";
             this.PlayerOneNameBox.Size = new System.Drawing.Size(100, 23);
             this.PlayerOneNameBox.TabIndex = 1;
+            this.PlayerOneNameBox.TextChanged += new System.EventHandler(this.PlayerOneNameBox_TextChanged);
             // 
             // PlayerTwoNameBox
             // 

@@ -9,13 +9,12 @@ namespace OW_Hero_Randomiser.Data
     internal class Roles
     {
 
-        private static readonly List<int> RolesList = new List<int>()
+        private static readonly List<string> RolesList = new List<string>()
         {
-            //1 = tank, 2+3 = dps, 4+5 = healer
-            1, 2, 3, 4, 5
+            "Tank", "Damage", "Damage", "Support", "Support"
         };
 
-        public static List<int> rolesList { get { return RolesList; } }
+        public static List<string> rolesList { get { return RolesList; } }
 
     }
 }

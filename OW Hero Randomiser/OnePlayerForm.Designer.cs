@@ -53,7 +53,6 @@
             this.label1.Size = new System.Drawing.Size(144, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter players\' names here:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -133,7 +132,6 @@
             this.Controls.Add(this.PlayerOneNameBox);
             this.Name = "OnePlayerForm";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.OnePlayerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

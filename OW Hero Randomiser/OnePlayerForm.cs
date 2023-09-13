@@ -1,4 +1,5 @@
 ﻿using OW_Hero_Randomiser.Data;
+using OW_Hero_Randomiser.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,113 +14,58 @@ namespace OW_Hero_Randomiser
 {
     public partial class OnePlayerForm : Form
     {
+        Functions functions = new Functions();
         public OnePlayerForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-
-        private void OnePlayerForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 RoleDropdown1.Visible = true;
                 label2.Visible = false;
                 label3.Visible = true;
             }
-            if(checkBox1.Checked == false)
+            if (checkBox1.Checked == false)
             {
-                RoleDropdown1.Visible=false;
-                label2.Visible=true;
-                label3.Visible=false;
+                RoleDropdown1.Visible = false;
+                label2.Visible = true;
+                label3.Visible = false;
             }
         }
 
         private void RandomiseButton_Click(object sender, EventArgs e)
         {
-            string PlayerOneName = PlayerOneNameBox.Text;
-            List<int> RolesList = Roles.rolesList;
-            Random rnd = new Random();
-            int p1RadomRoleIndex = rnd.Next(RolesList.Count);
-            int p1Role = RolesList[p1RadomRoleIndex];
+            string playerOneName = PlayerOneNameBox.Text;
+
             if (checkBox1.Checked == false)
             {
-                if (p1Role == 1)
-                {
-                    string p1role = "Tank";
-                    List<string> TanksList = TankHeroes.tanksList;
-                    int p1RandomHeroIndex = rnd.Next(TanksList.Count);
-                    string p1Hero = TanksList[p1RandomHeroIndex];
-                    label2.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                string playerOneRole = functions.GetRole();
 
-                else if (p1Role == 2 || p1Role == 3)
-                {
-                    string p1role = "Damage";
-                    List<string> DamageHeroesList = DamageHeroes.damageHeroesList;
-                    int p1RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    string p1Hero = DamageHeroesList[p1RandomHeroIndex];
-                    label2.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                string playerOneHero = functions.GetHero(playerOneRole);
 
-                else if (p1Role == 4 || p1Role == 5)
-                {
-                    string p1role = "Support";
-                    List<string> SupportsList = SupportHeroes.supportsList;
-                    int p1RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    string p1Hero = SupportsList[p1RandomHeroIndex];
-                    label2.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                label2.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
 
-                else
-                {
-                    label2.Text = PlayerOneName + " An error occurred";
-                }
+                functions.ResetRoles();
+                functions.ResetHeroes();
             }
-            else
+
+            if (checkBox1.Checked == true)
             {
-                if(RoleDropdown1.SelectedIndex == 0)
-                {
-                    string p1role = "Tank";
-                    List<string> TanksList = TankHeroes.tanksList;
-                    int p1RandomHeroIndex = rnd.Next(TanksList.Count);
-                    string p1Hero = TanksList[p1RandomHeroIndex];
-                    label3.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                int playerOneSelectedIndex = RoleDropdown1.SelectedIndex;
 
-                else if(RoleDropdown1.SelectedIndex == 1)
-                {
-                    string p1role = "Damage";
-                    List<string> DamageHeroesList = DamageHeroes.damageHeroesList;
-                    int p1RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    string p1Hero = DamageHeroesList[p1RandomHeroIndex];
-                    label3.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                string playerOneRole = functions.GetRoleBySelectedIndex(playerOneSelectedIndex);
 
-                else if(RoleDropdown1.SelectedIndex == 2)
-                {
-                    string p1role = "Support";
-                    List<string> SupportsList = SupportHeroes.supportsList;
-                    int p1RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    string p1Hero = SupportsList[p1RandomHeroIndex];
-                    label3.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                }
+                string playerOneHero = functions.GetHeroBySelectedIndex(playerOneSelectedIndex);
 
-                else
-                {
-                    label3.Text = PlayerOneName + " An error occurred";
-                }
+                label3.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+
+                functions.ResetRoles();
+                functions.ResetHeroes();
             }
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
