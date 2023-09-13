@@ -1,4 +1,5 @@
 ﻿using OW_Hero_Randomiser.Data;
+using OW_Hero_Randomiser.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace OW_Hero_Randomiser
 {
     public partial class FourPlayerForm : Form
     {
+        Functions functions = new Functions();
         public FourPlayerForm()
         {
             InitializeComponent();
@@ -54,384 +56,60 @@ namespace OW_Hero_Randomiser
 
         private void RandomiseButton_Click(object sender, EventArgs e)
         {
-            string PlayerOneName = PlayerOneNameBox.Text;
-            string PlayerTwoName = PlayerTwoNameBox.Text;
-            string PlayerThreeName = PlayerThreeNameBox.Text;
-            string PlayerFourName = PlayerFourNameBox.Text;
-            List<int> RolesList = new List<int>();
-            Random rnd = new Random();
-            int p1RadomRoleIndex = rnd.Next(RolesList.Count);
-            int p1Role = RolesList[p1RadomRoleIndex];
-            RolesList.RemoveAt(p1RadomRoleIndex);
-            int p2RandomRoleIndex = rnd.Next(RolesList.Count);
-            int p2Role = RolesList[p2RandomRoleIndex];
-            RolesList.RemoveAt(p2RandomRoleIndex);
-            int p3RandomRoleIndex = rnd.Next(RolesList.Count);
-            int p3Role = RolesList[p3RandomRoleIndex];
-            RolesList.RemoveAt(p3RandomRoleIndex);
-            List<string> TanksList = TankHeroes.tanksList;
-            List<string> DamageHeroesList = DamageHeroes.damageHeroesList;
-            List<string> SupportsList = SupportHeroes.supportsList;
-            string p1Hero = string.Empty;
-            string p2Hero = string.Empty;
-            string p3Hero = string.Empty;
-            string p4Hero = string.Empty;
+            string playerOneName = PlayerOneNameBox.Text;
+            string playerTwoName = PlayerTwoNameBox.Text;
+            string playerThreeName = PlayerThreeNameBox.Text;
+            string playerFourName = PlayerFourNameBox.Text;
+
             if (checkBox1.Checked == false)
             {
-                if (p1Role == 1)
-                {
-                    string p1role = "Tank";
-                    int p1RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p1Hero = TanksList[p1RandomHeroIndex];
-                    PlayerOneNameLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    TanksList.RemoveAt(p1RandomHeroIndex);
-                }
+                string playerOneRole = functions.GetRole();
+                string playerTwoRole = functions.GetRole();
+                string playerThreeRole = functions.GetRole();
+                string playerFourRole = functions.GetRole();
+                string playerFiveRole = functions.GetRole();
 
-                else if (p1Role == 2 || p1Role == 3)
-                {
-                    string p1role = "Damage";
-                    int p1RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p1Hero = DamageHeroesList[p1RandomHeroIndex];
-                    PlayerOneNameLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    DamageHeroesList.RemoveAt(p1RandomHeroIndex);
-                }
+                string playerOneHero = functions.GetHero(playerOneRole);
+                string playerTwoHero = functions.GetHero(playerTwoRole);
+                string playerThreeHero = functions.GetHero(playerThreeRole);
+                string playerFourHero = functions.GetHero(playerFourRole);
+                string playerFiveHero = functions.GetHero(playerFiveRole);
 
-                else if (p1Role == 4 || p1Role == 5)
-                {
-                    string p1role = "Support";
-                    int p1RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p1Hero = SupportsList[p1RandomHeroIndex];
-                    PlayerOneNameLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    SupportsList.RemoveAt(p1RandomHeroIndex);
-                }
+                PlayerOneNameLabel.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+                PlayerTwoNameLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
+                PlayerThreeNameLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
+                PlayerFourNameLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
 
-                else
-                {
-                    PlayerOneNameLabel.Text = PlayerOneName + ": An error occurred";
-                }
-
-                //--------------------------
-
-                if (p2Role == 1)
-                {
-                    string p2role = "Tank";
-                    int p2RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p2Hero = TanksList[p2RandomHeroIndex];
-                    PlayerTwoNameLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    TanksList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else if (p2Role == 2 || p2Role == 3)
-                {
-                    string p2role = "Damage";
-                    int p2RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p2Hero = DamageHeroesList[p2RandomHeroIndex];
-                    PlayerTwoNameLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    DamageHeroesList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else if (p2Role == 4 || p2Role == 5)
-                {
-                    string p2role = "Support";
-                    int p2RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p2Hero = SupportsList[p2RandomHeroIndex];
-                    PlayerTwoNameLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    SupportsList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else
-                {
-                    PlayerTwoNameLabel.Text = PlayerTwoName + ": An error occurred";
-                }
-
-                //-----------------------------
-
-                if (p3Role == 1)
-                {
-                    string p3role = "Tank";
-                    int p3RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p3Hero = TanksList[p3RandomHeroIndex];
-                    PlayerThreeNameLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    TanksList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else if (p3Role == 2 || p3Role == 3)
-                {
-                    string p3role = "Damage";
-                    int p3RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p3Hero = DamageHeroesList[p3RandomHeroIndex];
-                    PlayerThreeNameLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    DamageHeroesList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else if (p3Role == 4 || p3Role == 5)
-                {
-                    string p3role = "Support";
-                    int p3RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p3Hero = SupportsList[p3RandomHeroIndex];
-                    PlayerThreeNameLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    SupportsList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else
-                {
-                    PlayerThreeNameLabel.Text = PlayerThreeName + ": An error occurred";
-                }
-
-                //------------------------------------------------------
-
-                int p4RandomRoleIndex = rnd.Next(RolesList.Count);
-                int p4Role = RolesList[p4RandomRoleIndex];
-
-                if (p4Role == 1)
-                {
-                    string p4role = "Tank";
-                    int p4RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p4Hero = TanksList[p4RandomHeroIndex];
-                    PlayerFourNameLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else if (p4Role == 2 || p4Role == 3)
-                {
-                    string p4role = "Damage";
-                    int p4RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p4Hero = DamageHeroesList[p4RandomHeroIndex];
-                    PlayerFourNameLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else if (p4Role == 4 || p4Role == 5)
-                {
-                    string p4role = "Support";
-                    int p4RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p4Hero = SupportsList[p4RandomHeroIndex];
-                    PlayerFourNameLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else
-                {
-                    PlayerFourNameLabel.Text = PlayerFourName + ": An error occurred";
-                }
-
-                //------------------------------------------------------
-
-                RolesList.Add(p1Role);
-                RolesList.Add(p2Role);
-                RolesList.Add(p3Role);
-                if (p1Role == 1)
-                {
-                    TanksList.Add(p1Hero);
-                }
-                else if (p1Role == 2 || p1Role == 3)
-                {
-                    DamageHeroesList.Add(p1Hero);
-                }
-                else if (p1Role == 4 || p1Role == 5)
-                {
-                    SupportsList.Add(p1Hero);
-                }
-
-                if (p2Role == 1)
-                {
-                    TanksList.Add(p2Hero);
-                }
-                else if (p2Role == 2 || p2Role == 3)
-                {
-                    DamageHeroesList.Add(p2Hero);
-                }
-                else if (p2Role == 4 || p2Role == 5)
-                {
-                    SupportsList.Add(p2Hero);
-                }
-
-                if (p3Role == 1)
-                {
-                    TanksList.Add(p3Hero);
-                }
-                else if (p3Role == 2 || p3Role == 3)
-                {
-                    DamageHeroesList.Add(p3Hero);
-                }
-                else if (p3Role == 4 || p3Role == 5)
-                {
-                    SupportsList.Add(p3Hero);
-                }
+                functions.ResetRoles();
+                functions.ResetHeroes();
             }
-            else
+
+            if (checkBox1.Checked == true)
             {
-                if (roleDropdown1.SelectedIndex == 0)
-                {
-                    string p1role = "Tank";
-                    int p1RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p1Hero = TanksList[p1RandomHeroIndex];
-                    PlayerOneSelectedRoleLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    TanksList.RemoveAt(p1RandomHeroIndex);
-                }
+                int playerOneSelectedIndex = roleDropdown1.SelectedIndex;
+                int playerTwoSelectedIndex = roleDropdown2.SelectedIndex;
+                int playerThreeSelectedIndex = roleDropdown3.SelectedIndex;
+                int playerFourSelectedIndex = roleDropdown4.SelectedIndex;
 
-                else if (roleDropdown1.SelectedIndex == 1)
-                {
-                    string p1role = "Damage";
-                    int p1RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p1Hero = DamageHeroesList[p1RandomHeroIndex];
-                    PlayerOneSelectedRoleLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    DamageHeroesList.RemoveAt(p1RandomHeroIndex);
-                }
+                string playerOneRole = functions.GetRoleBySelectedIndex(playerOneSelectedIndex);
+                string playerTwoRole = functions.GetRoleBySelectedIndex(playerTwoSelectedIndex);
+                string playerThreeRole = functions.GetRoleBySelectedIndex(playerThreeSelectedIndex);
+                string playerFourRole = functions.GetRoleBySelectedIndex(playerFourSelectedIndex);
 
-                else if (roleDropdown1.SelectedIndex == 2)
-                {
-                    string p1role = "Support";
-                    int p1RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p1Hero = SupportsList[p1RandomHeroIndex];
-                    PlayerOneSelectedRoleLabel.Text = PlayerOneName + ": " + p1role + ", " + p1Hero;
-                    SupportsList.RemoveAt(p1RandomHeroIndex);
-                }
+                string playerOneHero = functions.GetHeroBySelectedIndex(playerOneSelectedIndex);
+                string playerTwoHero = functions.GetHeroBySelectedIndex(playerTwoSelectedIndex);
+                string playerThreeHero = functions.GetHeroBySelectedIndex(playerThreeSelectedIndex);
+                string playerFourHero = functions.GetHeroBySelectedIndex(playerFourSelectedIndex);
 
-                else
-                {
-                    PlayerOneSelectedRoleLabel.Text = PlayerOneName + " An error occurred";
-                }
+                PlayerOneSelectedRoleLabel.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+                PlayerTwoSelectedRoleLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
+                PlayerThreeSelectedRoleLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
+                PlayerFourSelectedRoleLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
 
-                //-----------------------------------------------
-
-                if (roleDropdown2.SelectedIndex == 0)
-                {
-                    string p2role = "Tank";
-                    int p2RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p2Hero = TanksList[p2RandomHeroIndex];
-                    PlayerTwoSelectedRoleLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    TanksList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else if (roleDropdown2.SelectedIndex == 1)
-                {
-                    string p2role = "Damage";
-                    int p2RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p2Hero = DamageHeroesList[p2RandomHeroIndex];
-                    PlayerTwoSelectedRoleLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    DamageHeroesList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else if (roleDropdown2.SelectedIndex == 2)
-                {
-                    string p2role = "Support";
-                    int p2RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p2Hero = SupportsList[p2RandomHeroIndex];
-                    PlayerTwoSelectedRoleLabel.Text = PlayerTwoName + ": " + p2role + ", " + p2Hero;
-                    SupportsList.RemoveAt(p2RandomHeroIndex);
-                }
-
-                else
-                {
-                    PlayerTwoSelectedRoleLabel.Text = PlayerTwoName + " An error occurred";
-                }
-
-                //------------------------------------------
-
-
-                if (roleDropdown3.SelectedIndex == 0)
-                {
-                    string p3role = "Tank";
-                    int p3RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p3Hero = TanksList[p3RandomHeroIndex];
-                    PlayerThreeSelectedRoleLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    TanksList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else if (roleDropdown3.SelectedIndex == 1)
-                {
-                    string p3role = "Damage";
-                    int p3RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p3Hero = DamageHeroesList[p3RandomHeroIndex];
-                    PlayerThreeSelectedRoleLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    DamageHeroesList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else if (roleDropdown3.SelectedIndex == 2)
-                {
-                    string p3role = "Support";
-                    int p3RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p3Hero = SupportsList[p3RandomHeroIndex];
-                    PlayerThreeSelectedRoleLabel.Text = PlayerThreeName + ": " + p3role + ", " + p3Hero;
-                    SupportsList.RemoveAt(p3RandomHeroIndex);
-                }
-
-                else
-                {
-                    PlayerThreeSelectedRoleLabel.Text = PlayerThreeName + " An error occurred";
-                }
-
-                //-----------------------------------------------------------
-
-                if (roleDropdown4.SelectedIndex == 0)
-                {
-                    string p4role = "Tank";
-                    int p4RandomHeroIndex = rnd.Next(TanksList.Count);
-                    p4Hero = TanksList[p4RandomHeroIndex];
-                    PlayerFourSelectedRoleLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else if (roleDropdown4.SelectedIndex == 1)
-                {
-                    string p4role = "Damage";
-                    int p4RandomHeroIndex = rnd.Next(DamageHeroesList.Count);
-                    p4Hero = DamageHeroesList[p4RandomHeroIndex];
-                    PlayerFourSelectedRoleLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else if (roleDropdown4.SelectedIndex == 2)
-                {
-                    string p4role = "Support";
-                    int p4RandomHeroIndex = rnd.Next(SupportsList.Count);
-                    p4Hero = SupportsList[p4RandomHeroIndex];
-                    PlayerFourSelectedRoleLabel.Text = PlayerFourName + ": " + p4role + ", " + p4Hero;
-                }
-
-                else
-                {
-                    PlayerFourSelectedRoleLabel.Text = PlayerFourName + " An error occurred";
-                }
-
-                RolesList.Add(p1Role);
-                RolesList.Add(p2Role);
-                RolesList.Add(p3Role);
-                if (roleDropdown1.SelectedIndex == 0)
-                {
-                    TanksList.Add(p1Hero);
-                }
-                else if (roleDropdown1.SelectedIndex == 1)
-                {
-                    DamageHeroesList.Add(p1Hero);
-                }
-                else if (roleDropdown1.SelectedIndex == 2)
-                {
-                    SupportsList.Add(p1Hero);
-                }
-                //--------------------------------
-                if (roleDropdown2.SelectedIndex == 0)
-                {
-                    TanksList.Add(p2Hero);
-                }
-                else if (roleDropdown2.SelectedIndex == 1)
-                {
-                    DamageHeroesList.Add(p2Hero);
-                }
-                else if (roleDropdown2.SelectedIndex == 2)
-                {
-                    SupportsList.Add(p2Hero);
-                }
-                //----------------------------
-                if (roleDropdown3.SelectedIndex == 0)
-                {
-                    TanksList.Add(p3Hero);
-                }
-                else if (roleDropdown3.SelectedIndex == 1)
-                {
-                    DamageHeroesList.Add(p3Hero);
-                }
-                else if (roleDropdown3.SelectedIndex == 2)
-                {
-                    SupportsList.Add(p3Hero);
-                }
+                functions.ResetRoles();
+                functions.ResetHeroes();
             }
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
