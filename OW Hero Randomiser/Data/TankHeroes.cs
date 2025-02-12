@@ -12,7 +12,7 @@ namespace OW_Hero_Randomiser.Data
         {
             
             "Reinhardt", "Zarya", "Sigma", "Orisa", "Winston", "Wreckingball",
-            "Junkerqueen", "D.va", "Doomfist", "Roadhog", "Ramattra"
+            "Junkerqueen", "D.va", "Doomfist", "Roadhog", "Ramattra", "Hazard"
         };
 
         public static List<string> tanksList { get { return TanksList; } }
