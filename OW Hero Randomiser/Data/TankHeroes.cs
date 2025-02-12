@@ -11,7 +11,7 @@ namespace OW_Hero_Randomiser.Data
         private static readonly List<string> TanksList = new List<string>()
         {
             
-            "Reinhardt", "Zarya", "Sigma", "Orisa", "Winston", "Wreckingball",
+            "Reinhardt", "Zarya", "Sigma", "Orisa", "Winston", "Wreckingball", "Mauga",
             "Junkerqueen", "D.va", "Doomfist", "Roadhog", "Ramattra", "Hazard"
         };
 
