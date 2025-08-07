@@ -88,6 +88,21 @@ namespace OW_Hero_Randomiser
                 PlayerFourNameLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
                 PlayerFiveNameLabel.Text = playerFiveName + ": " + playerFiveRole + ", " + playerFiveHero;
 
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
+                Image playerFourHeroIcon = functions.GetHeroIcon(playerFourHero);
+                pictureBox4.Image = playerFourHeroIcon;
+
+                Image playerFiveHeroIcon = functions.GetHeroIcon(playerFiveHero);
+                pictureBox5.Image = playerFiveHeroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
@@ -118,10 +133,25 @@ namespace OW_Hero_Randomiser
                 PlayerFourSelectedRoleLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
                 PlayerFiveSelectedRoleLabel.Text = playerFiveName + ": " + playerFiveRole + ", " + playerFiveHero;
 
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
+                Image playerFourHeroIcon = functions.GetHeroIcon(playerFourHero);
+                pictureBox4.Image = playerFourHeroIcon;
+
+                Image playerFiveHeroIcon = functions.GetHeroIcon(playerFiveHero);
+                pictureBox5.Image = playerFiveHeroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
-            
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)

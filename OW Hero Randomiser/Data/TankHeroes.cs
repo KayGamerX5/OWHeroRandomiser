@@ -10,9 +10,20 @@ namespace OW_Hero_Randomiser.Data
     {
         private static readonly List<string> TanksList = new List<string>()
         {
-            
-            "Reinhardt", "Zarya", "Sigma", "Orisa", "Winston", "Wreckingball", "Mauga",
-            "Junkerqueen", "D.va", "Doomfist", "Roadhog", "Ramattra", "Hazard"
+
+            "D.va",
+            "Doomfist",
+            "Hazard",
+            "Junkerqueen",
+            "Mauga",
+            "Orisa",
+            "Ramattra",
+            "Reinhardt",
+            "Roadhog",
+            "Sigma",
+            "Winston",
+            "Wreckingball",
+            "Zarya"
         };
 
         public static List<string> tanksList { get { return TanksList; } }

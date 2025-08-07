@@ -80,6 +80,18 @@ namespace OW_Hero_Randomiser
                 PlayerThreeNameLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
                 PlayerFourNameLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
 
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
+                Image playerFourHeroIcon = functions.GetHeroIcon(playerFourHero);
+                pictureBox4.Image = playerFourHeroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
@@ -105,6 +117,18 @@ namespace OW_Hero_Randomiser
                 PlayerTwoSelectedRoleLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
                 PlayerThreeSelectedRoleLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
                 PlayerFourSelectedRoleLabel.Text = playerFourName + ": " + playerFourRole + ", " + playerFourHero;
+
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
+                Image playerFourHeroIcon = functions.GetHeroIcon(playerFourHero);
+                pictureBox4.Image = playerFourHeroIcon;
 
                 functions.ResetRoles();
                 functions.ResetHeroes();

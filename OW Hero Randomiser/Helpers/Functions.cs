@@ -182,6 +182,23 @@ namespace OW_Hero_Randomiser.Helpers
             pickedSupportHeroes.RemoveRange(0, pickedSupportHeroes.Count);
             return tankHeroes;
         }
+
+        public Image GetHeroIcon(string hero)
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string trimmedPath = currentDirectory.Replace("\\bin\\Debug\\net6.0-windows", "");
+            string heroIconPath = trimmedPath + "\\Images\\"+hero+"Icon.png";
+            try
+            {
+                Image heroIcon = Image.FromFile(heroIconPath);
+                return heroIcon;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            
+        }
         
     }
 }

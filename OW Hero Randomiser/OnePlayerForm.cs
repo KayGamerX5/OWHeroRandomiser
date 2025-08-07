@@ -1,14 +1,15 @@
-﻿using OW_Hero_Randomiser.Data;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using OW_Hero_Randomiser.Data;
 using OW_Hero_Randomiser.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace OW_Hero_Randomiser
 {
@@ -45,8 +46,10 @@ namespace OW_Hero_Randomiser
                 string playerOneRole = functions.GetRole();
 
                 string playerOneHero = functions.GetHero(playerOneRole);
-
                 label2.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
+                
+                Image heroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = heroIcon;
 
                 functions.ResetRoles();
                 functions.ResetHeroes();
@@ -62,6 +65,9 @@ namespace OW_Hero_Randomiser
 
                 label3.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
 
+                Image heroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = heroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
@@ -74,5 +80,6 @@ namespace OW_Hero_Randomiser
             Check.Show();
             Hide();
         }
+
     }
 }

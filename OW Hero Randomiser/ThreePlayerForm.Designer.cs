@@ -28,204 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.PlayerOneNameBox = new System.Windows.Forms.TextBox();
-            this.PlayerTwoNameBox = new System.Windows.Forms.TextBox();
-            this.PlayerThreeNameBox = new System.Windows.Forms.TextBox();
-            this.RandomiseButton = new System.Windows.Forms.Button();
-            this.PlayerOneNameLabel = new System.Windows.Forms.Label();
-            this.PlayerTwoNameLabel = new System.Windows.Forms.Label();
-            this.PlayerThreeNameLabel = new System.Windows.Forms.Label();
-            this.BackButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.roleDropdown1 = new System.Windows.Forms.ComboBox();
-            this.roleDropdown2 = new System.Windows.Forms.ComboBox();
-            this.roleDropdown3 = new System.Windows.Forms.ComboBox();
-            this.PlayerOneSelectedRoleLabel = new System.Windows.Forms.Label();
-            this.PlayerTwoSelectedRoleLabel = new System.Windows.Forms.Label();
-            this.PlayerThreeSelectedRoleLabel = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            PlayerOneNameBox = new TextBox();
+            PlayerTwoNameBox = new TextBox();
+            PlayerThreeNameBox = new TextBox();
+            RandomiseButton = new Button();
+            PlayerOneNameLabel = new Label();
+            PlayerTwoNameLabel = new Label();
+            PlayerThreeNameLabel = new Label();
+            BackButton = new Button();
+            checkBox1 = new CheckBox();
+            roleDropdown1 = new ComboBox();
+            roleDropdown2 = new ComboBox();
+            roleDropdown3 = new ComboBox();
+            PlayerOneSelectedRoleLabel = new Label();
+            PlayerTwoSelectedRoleLabel = new Label();
+            PlayerThreeSelectedRoleLabel = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Enter players\' names here";
+            label1.AutoSize = true;
+            label1.Location = new Point(32, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(141, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Enter players' names here";
             // 
             // PlayerOneNameBox
             // 
-            this.PlayerOneNameBox.Location = new System.Drawing.Point(32, 48);
-            this.PlayerOneNameBox.Name = "PlayerOneNameBox";
-            this.PlayerOneNameBox.Size = new System.Drawing.Size(141, 23);
-            this.PlayerOneNameBox.TabIndex = 1;
+            PlayerOneNameBox.Location = new Point(32, 48);
+            PlayerOneNameBox.Name = "PlayerOneNameBox";
+            PlayerOneNameBox.Size = new Size(141, 23);
+            PlayerOneNameBox.TabIndex = 1;
             // 
             // PlayerTwoNameBox
             // 
-            this.PlayerTwoNameBox.Location = new System.Drawing.Point(32, 77);
-            this.PlayerTwoNameBox.Name = "PlayerTwoNameBox";
-            this.PlayerTwoNameBox.Size = new System.Drawing.Size(141, 23);
-            this.PlayerTwoNameBox.TabIndex = 2;
+            PlayerTwoNameBox.Location = new Point(32, 77);
+            PlayerTwoNameBox.Name = "PlayerTwoNameBox";
+            PlayerTwoNameBox.Size = new Size(141, 23);
+            PlayerTwoNameBox.TabIndex = 2;
             // 
             // PlayerThreeNameBox
             // 
-            this.PlayerThreeNameBox.Location = new System.Drawing.Point(32, 106);
-            this.PlayerThreeNameBox.Name = "PlayerThreeNameBox";
-            this.PlayerThreeNameBox.Size = new System.Drawing.Size(141, 23);
-            this.PlayerThreeNameBox.TabIndex = 3;
+            PlayerThreeNameBox.Location = new Point(32, 106);
+            PlayerThreeNameBox.Name = "PlayerThreeNameBox";
+            PlayerThreeNameBox.Size = new Size(141, 23);
+            PlayerThreeNameBox.TabIndex = 3;
             // 
             // RandomiseButton
             // 
-            this.RandomiseButton.Location = new System.Drawing.Point(32, 135);
-            this.RandomiseButton.Name = "RandomiseButton";
-            this.RandomiseButton.Size = new System.Drawing.Size(75, 23);
-            this.RandomiseButton.TabIndex = 4;
-            this.RandomiseButton.Text = "Randomise";
-            this.RandomiseButton.UseVisualStyleBackColor = true;
-            this.RandomiseButton.Click += new System.EventHandler(this.RandomiseButton_Click);
+            RandomiseButton.Location = new Point(32, 135);
+            RandomiseButton.Name = "RandomiseButton";
+            RandomiseButton.Size = new Size(75, 23);
+            RandomiseButton.TabIndex = 4;
+            RandomiseButton.Text = "Randomise";
+            RandomiseButton.UseVisualStyleBackColor = true;
+            RandomiseButton.Click += RandomiseButton_Click;
             // 
             // PlayerOneNameLabel
             // 
-            this.PlayerOneNameLabel.AutoSize = true;
-            this.PlayerOneNameLabel.Location = new System.Drawing.Point(179, 51);
-            this.PlayerOneNameLabel.Name = "PlayerOneNameLabel";
-            this.PlayerOneNameLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerOneNameLabel.TabIndex = 5;
+            PlayerOneNameLabel.AutoSize = true;
+            PlayerOneNameLabel.Location = new Point(179, 51);
+            PlayerOneNameLabel.Name = "PlayerOneNameLabel";
+            PlayerOneNameLabel.Size = new Size(0, 15);
+            PlayerOneNameLabel.TabIndex = 5;
             // 
             // PlayerTwoNameLabel
             // 
-            this.PlayerTwoNameLabel.AutoSize = true;
-            this.PlayerTwoNameLabel.Location = new System.Drawing.Point(179, 80);
-            this.PlayerTwoNameLabel.Name = "PlayerTwoNameLabel";
-            this.PlayerTwoNameLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerTwoNameLabel.TabIndex = 6;
+            PlayerTwoNameLabel.AutoSize = true;
+            PlayerTwoNameLabel.Location = new Point(179, 80);
+            PlayerTwoNameLabel.Name = "PlayerTwoNameLabel";
+            PlayerTwoNameLabel.Size = new Size(0, 15);
+            PlayerTwoNameLabel.TabIndex = 6;
             // 
             // PlayerThreeNameLabel
             // 
-            this.PlayerThreeNameLabel.AutoSize = true;
-            this.PlayerThreeNameLabel.Location = new System.Drawing.Point(179, 109);
-            this.PlayerThreeNameLabel.Name = "PlayerThreeNameLabel";
-            this.PlayerThreeNameLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerThreeNameLabel.TabIndex = 7;
+            PlayerThreeNameLabel.AutoSize = true;
+            PlayerThreeNameLabel.Location = new Point(179, 109);
+            PlayerThreeNameLabel.Name = "PlayerThreeNameLabel";
+            PlayerThreeNameLabel.Size = new Size(0, 15);
+            PlayerThreeNameLabel.TabIndex = 7;
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(468, 135);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 8;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            BackButton.Location = new Point(468, 135);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(75, 23);
+            BackButton.TabIndex = 8;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(113, 138);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 19);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Manually set roles";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(113, 138);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(121, 19);
+            checkBox1.TabIndex = 9;
+            checkBox1.Text = "Manually set roles";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // roleDropdown1
             // 
-            this.roleDropdown1.FormattingEnabled = true;
-            this.roleDropdown1.Items.AddRange(new object[] {
-            "Tank",
-            "DPS",
-            "Support"});
-            this.roleDropdown1.Location = new System.Drawing.Point(179, 48);
-            this.roleDropdown1.Name = "roleDropdown1";
-            this.roleDropdown1.Size = new System.Drawing.Size(121, 23);
-            this.roleDropdown1.TabIndex = 10;
-            this.roleDropdown1.Text = "Select role";
-            this.roleDropdown1.Visible = false;
+            roleDropdown1.FormattingEnabled = true;
+            roleDropdown1.Items.AddRange(new object[] { "Tank", "DPS", "Support" });
+            roleDropdown1.Location = new Point(179, 48);
+            roleDropdown1.Name = "roleDropdown1";
+            roleDropdown1.Size = new Size(121, 23);
+            roleDropdown1.TabIndex = 10;
+            roleDropdown1.Text = "Select role";
+            roleDropdown1.Visible = false;
             // 
             // roleDropdown2
             // 
-            this.roleDropdown2.FormattingEnabled = true;
-            this.roleDropdown2.Items.AddRange(new object[] {
-            "Tank",
-            "DPS",
-            "Support"});
-            this.roleDropdown2.Location = new System.Drawing.Point(179, 77);
-            this.roleDropdown2.Name = "roleDropdown2";
-            this.roleDropdown2.Size = new System.Drawing.Size(121, 23);
-            this.roleDropdown2.TabIndex = 11;
-            this.roleDropdown2.Text = "Select role";
-            this.roleDropdown2.Visible = false;
+            roleDropdown2.FormattingEnabled = true;
+            roleDropdown2.Items.AddRange(new object[] { "Tank", "DPS", "Support" });
+            roleDropdown2.Location = new Point(179, 77);
+            roleDropdown2.Name = "roleDropdown2";
+            roleDropdown2.Size = new Size(121, 23);
+            roleDropdown2.TabIndex = 11;
+            roleDropdown2.Text = "Select role";
+            roleDropdown2.Visible = false;
             // 
             // roleDropdown3
             // 
-            this.roleDropdown3.FormattingEnabled = true;
-            this.roleDropdown3.Items.AddRange(new object[] {
-            "Tank",
-            "DPS",
-            "Support"});
-            this.roleDropdown3.Location = new System.Drawing.Point(179, 106);
-            this.roleDropdown3.Name = "roleDropdown3";
-            this.roleDropdown3.Size = new System.Drawing.Size(121, 23);
-            this.roleDropdown3.TabIndex = 12;
-            this.roleDropdown3.Text = "Select role";
-            this.roleDropdown3.Visible = false;
+            roleDropdown3.FormattingEnabled = true;
+            roleDropdown3.Items.AddRange(new object[] { "Tank", "DPS", "Support" });
+            roleDropdown3.Location = new Point(179, 106);
+            roleDropdown3.Name = "roleDropdown3";
+            roleDropdown3.Size = new Size(121, 23);
+            roleDropdown3.TabIndex = 12;
+            roleDropdown3.Text = "Select role";
+            roleDropdown3.Visible = false;
             // 
             // PlayerOneSelectedRoleLabel
             // 
-            this.PlayerOneSelectedRoleLabel.AutoSize = true;
-            this.PlayerOneSelectedRoleLabel.Location = new System.Drawing.Point(306, 51);
-            this.PlayerOneSelectedRoleLabel.Name = "PlayerOneSelectedRoleLabel";
-            this.PlayerOneSelectedRoleLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerOneSelectedRoleLabel.TabIndex = 13;
-            this.PlayerOneSelectedRoleLabel.Visible = false;
+            PlayerOneSelectedRoleLabel.AutoSize = true;
+            PlayerOneSelectedRoleLabel.Location = new Point(306, 51);
+            PlayerOneSelectedRoleLabel.Name = "PlayerOneSelectedRoleLabel";
+            PlayerOneSelectedRoleLabel.Size = new Size(0, 15);
+            PlayerOneSelectedRoleLabel.TabIndex = 13;
+            PlayerOneSelectedRoleLabel.Visible = false;
             // 
             // PlayerTwoSelectedRoleLabel
             // 
-            this.PlayerTwoSelectedRoleLabel.AutoSize = true;
-            this.PlayerTwoSelectedRoleLabel.Location = new System.Drawing.Point(306, 80);
-            this.PlayerTwoSelectedRoleLabel.Name = "PlayerTwoSelectedRoleLabel";
-            this.PlayerTwoSelectedRoleLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerTwoSelectedRoleLabel.TabIndex = 14;
-            this.PlayerTwoSelectedRoleLabel.Visible = false;
+            PlayerTwoSelectedRoleLabel.AutoSize = true;
+            PlayerTwoSelectedRoleLabel.Location = new Point(306, 80);
+            PlayerTwoSelectedRoleLabel.Name = "PlayerTwoSelectedRoleLabel";
+            PlayerTwoSelectedRoleLabel.Size = new Size(0, 15);
+            PlayerTwoSelectedRoleLabel.TabIndex = 14;
+            PlayerTwoSelectedRoleLabel.Visible = false;
             // 
             // PlayerThreeSelectedRoleLabel
             // 
-            this.PlayerThreeSelectedRoleLabel.AutoSize = true;
-            this.PlayerThreeSelectedRoleLabel.Location = new System.Drawing.Point(306, 109);
-            this.PlayerThreeSelectedRoleLabel.Name = "PlayerThreeSelectedRoleLabel";
-            this.PlayerThreeSelectedRoleLabel.Size = new System.Drawing.Size(0, 15);
-            this.PlayerThreeSelectedRoleLabel.TabIndex = 15;
-            this.PlayerThreeSelectedRoleLabel.Visible = false;
+            PlayerThreeSelectedRoleLabel.AutoSize = true;
+            PlayerThreeSelectedRoleLabel.Location = new Point(306, 109);
+            PlayerThreeSelectedRoleLabel.Name = "PlayerThreeSelectedRoleLabel";
+            PlayerThreeSelectedRoleLabel.Size = new Size(0, 15);
+            PlayerThreeSelectedRoleLabel.TabIndex = 15;
+            PlayerThreeSelectedRoleLabel.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(3, 48);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(23, 23);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 16;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(3, 77);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(23, 23);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(3, 106);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(23, 23);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 18;
+            pictureBox3.TabStop = false;
             // 
             // ThreePlayerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 174);
-            this.Controls.Add(this.PlayerThreeSelectedRoleLabel);
-            this.Controls.Add(this.PlayerTwoSelectedRoleLabel);
-            this.Controls.Add(this.PlayerOneSelectedRoleLabel);
-            this.Controls.Add(this.roleDropdown3);
-            this.Controls.Add(this.roleDropdown2);
-            this.Controls.Add(this.roleDropdown1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.PlayerThreeNameLabel);
-            this.Controls.Add(this.PlayerTwoNameLabel);
-            this.Controls.Add(this.PlayerOneNameLabel);
-            this.Controls.Add(this.RandomiseButton);
-            this.Controls.Add(this.PlayerThreeNameBox);
-            this.Controls.Add(this.PlayerTwoNameBox);
-            this.Controls.Add(this.PlayerOneNameBox);
-            this.Controls.Add(this.label1);
-            this.Name = "ThreePlayerForm";
-            this.Text = "ThreePlayerForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(570, 174);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(PlayerThreeSelectedRoleLabel);
+            Controls.Add(PlayerTwoSelectedRoleLabel);
+            Controls.Add(PlayerOneSelectedRoleLabel);
+            Controls.Add(roleDropdown3);
+            Controls.Add(roleDropdown2);
+            Controls.Add(roleDropdown1);
+            Controls.Add(checkBox1);
+            Controls.Add(BackButton);
+            Controls.Add(PlayerThreeNameLabel);
+            Controls.Add(PlayerTwoNameLabel);
+            Controls.Add(PlayerOneNameLabel);
+            Controls.Add(RandomiseButton);
+            Controls.Add(PlayerThreeNameBox);
+            Controls.Add(PlayerTwoNameBox);
+            Controls.Add(PlayerOneNameBox);
+            Controls.Add(label1);
+            Name = "ThreePlayerForm";
+            Text = "ThreePlayerForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -246,5 +275,8 @@
         private Label PlayerOneSelectedRoleLabel;
         private Label PlayerTwoSelectedRoleLabel;
         private Label PlayerThreeSelectedRoleLabel;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
     }
 }

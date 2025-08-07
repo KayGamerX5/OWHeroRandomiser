@@ -72,6 +72,15 @@ namespace OW_Hero_Randomiser
                 PlayerTwoNameLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
                 PlayerThreeNameLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
 
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
@@ -94,11 +103,20 @@ namespace OW_Hero_Randomiser
                 PlayerTwoSelectedRoleLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
                 PlayerThreeSelectedRoleLabel.Text = playerThreeName + ": " + playerThreeRole + ", " + playerThreeHero;
 
+                Image playerOneHeroIcon = functions.GetHeroIcon(playerOneHero);
+                pictureBox1.Image = playerOneHeroIcon;
+
+                Image playerTwoHeroIcon = functions.GetHeroIcon(playerTwoHero);
+                pictureBox2.Image = playerTwoHeroIcon;
+
+                Image playerThreeHeroIcon = functions.GetHeroIcon(playerThreeHero);
+                pictureBox3.Image = playerThreeHeroIcon;
+
                 functions.ResetRoles();
                 functions.ResetHeroes();
             }
 
-        
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
