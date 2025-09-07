@@ -147,5 +147,10 @@ namespace OW_Hero_Randomiser
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace OW_Hero_Randomiser.Data
             "Lucio",
             "Mercy",
             "Moira",
+            "Wuyang",
             "Zenyatta"
         };
 

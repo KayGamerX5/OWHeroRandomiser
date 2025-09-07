@@ -59,14 +59,10 @@ namespace OW_Hero_Randomiser
                 string playerOneRole = functions.GetRole();
                 string playerTwoRole = functions.GetRole();
                 string playerThreeRole = functions.GetRole();
-                string playerFourRole = functions.GetRole();
-                string playerFiveRole = functions.GetRole();
 
                 string playerOneHero = functions.GetHero(playerOneRole);
                 string playerTwoHero = functions.GetHero(playerTwoRole);
                 string playerThreeHero = functions.GetHero(playerThreeRole);
-                string playerFourHero = functions.GetHero(playerFourRole);
-                string playerFiveHero = functions.GetHero(playerFiveRole);
 
                 PlayerOneNameLabel.Text = playerOneName + ": " + playerOneRole + ", " + playerOneHero;
                 PlayerTwoNameLabel.Text = playerTwoName + ": " + playerTwoRole + ", " + playerTwoHero;
@@ -126,6 +122,9 @@ namespace OW_Hero_Randomiser
             Hide();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

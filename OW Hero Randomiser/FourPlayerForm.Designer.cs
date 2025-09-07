@@ -237,16 +237,17 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(6, 51);
+            pictureBox2.Location = new Point(6, 80);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(23, 23);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(6, 80);
+            pictureBox1.Location = new Point(6, 51);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(23, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;

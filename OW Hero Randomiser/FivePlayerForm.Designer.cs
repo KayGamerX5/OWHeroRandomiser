@@ -294,7 +294,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(6, 73);
+            pictureBox1.Location = new Point(6, 44);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(23, 23);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -303,7 +303,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(6, 44);
+            pictureBox2.Location = new Point(6, 73);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(23, 23);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
