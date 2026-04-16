@@ -15,11 +15,13 @@ namespace OW_Hero_Randomiser.Data
             "Baptiste",
             "Brigitte",
             "Illari",
+            "Jetpack Cat",
             "Juno",
             "Kiriko",
             "Lifeweaver",
             "Lucio",
             "Mercy",
+            "Mizuki",
             "Moira",
             "Wuyang",
             "Zenyatta"

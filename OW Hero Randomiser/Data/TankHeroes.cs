@@ -12,6 +12,7 @@ namespace OW_Hero_Randomiser.Data
         {
 
             "D.va",
+            "Domina",
             "Doomfist",
             "Hazard",
             "Junkerqueen",

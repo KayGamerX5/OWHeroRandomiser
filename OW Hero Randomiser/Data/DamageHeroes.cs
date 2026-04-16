@@ -10,10 +10,12 @@ namespace OW_Hero_Randomiser.Data
     {
         private static readonly List<string> DamageHeroesList = new List<string>()
         {
+            "Anran",
             "Ashe",
             "Bastion",
             "Cassidy",
             "Echo",
+            "Emre",
             "Freja", 
             "Genji",
             "Hanzo",
@@ -21,12 +23,14 @@ namespace OW_Hero_Randomiser.Data
             "Mei",
             "Pharah",
             "Reaper",
+            "Sierra",
             "Sojourn",
             "Soldier76",
             "Sombra",
             "Symmetra",
             "Torbjörn",
             "Tracer",
+            "Vendetta",
             "Venture",
             "Widowmaker"
         };
